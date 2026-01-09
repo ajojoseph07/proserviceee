@@ -7,7 +7,7 @@ const Testimonial = () => {
     return (
       <div className="flex flex-col items-center px-6 md:px-16 lg:px-24 bg-slate-50 
         pt-12 pb-30">
-        <Title title="What our customers say" subTitle="This platform allows users to submit product or service requirements and connect with nearby suppliers. Enquiries are filtered by location and category and delivered via email." />
+        <Title title="What Our Customers Say" subTitle="A simple platform that connects users with nearby suppliers through location- and category-based email enquiries." />
        <div className="flex flex-wrap items-center justify-center gap-6 mt-20">
          {testimonials.map((testimonial) => (
            <div key={testimonial.id} className="bg-white p-6 rounded-xl 
