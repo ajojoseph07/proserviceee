@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { assets } from "../assets/assets";
 
 /* -------- SAMPLE LOCATION DATA -------- */
 const STATES = ["Kerala", "Tamil Nadu", "Karnataka"];
@@ -40,7 +39,6 @@ const Hero = () => {
     setErrors(newErrors);
     if (Object.keys(newErrors).length > 0) return;
 
-    // ✅ Build query params
     const query = new URLSearchParams({
       locationType,
       locationValue,
@@ -48,11 +46,9 @@ const Hero = () => {
       subCategory,
     });
 
-    // ✅ Redirect to Post Requirement page
     navigate(`/post-requirement?${query.toString()}`);
   };
 
-  /* -------- LOCATION OPTIONS -------- */
   const getLocationOptions = () => {
     if (locationType === "state") return STATES;
     if (locationType === "district") return DISTRICTS;
@@ -64,7 +60,7 @@ const Hero = () => {
     <div
       className="h-screen bg-cover bg-center flex items-center justify-center px-6"
       style={{
-        backgroundImage: `url(${assets.heroBg || "/src/assets/3.jpg"})`,
+        backgroundImage: "url('/3.jpg')", // ✅ CORRECT
       }}
     >
       <form
