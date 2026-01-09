@@ -1,0 +1,20 @@
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+.env.*
+
+# Firebase Admin SDK key
+serviceAccountKey.json
+*.key
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# OS & Editor files
+.DS_Store
+.vscode/
+.idea/
